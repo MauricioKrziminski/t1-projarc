@@ -1,13 +1,17 @@
 package com.example.demo.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Turma {
+
     @Id
     private Long codigo;
-    private String professor;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Professor professor;
+
     private String horario;
 
     // Getters e Setters
@@ -19,11 +23,11 @@ public class Turma {
         this.codigo = codigo;
     }
 
-    public String getProfessor() {
+    public Professor getProfessor() {
         return professor;
     }
 
-    public void setProfessor(String professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 

@@ -1,3 +1,5 @@
+package com.example.demo.api;
+
 import com.example.demo.domain.Alocacao;
 import com.example.demo.infrastructure.AlocacaoRepository;
 import com.example.demo.infrastructure.TurmaRepository;
